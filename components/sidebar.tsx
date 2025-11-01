@@ -67,7 +67,7 @@ export function Sidebar({ isMobileOpen = false, onClose }: SidebarProps) {
       {/* Mobile Overlay */}
       {isMobileOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 md:hidden"
+          className="fixed inset-0 bg-black/50 z-[100] md:hidden"
           onClick={onClose}
         />
       )}
@@ -75,12 +75,13 @@ export function Sidebar({ isMobileOpen = false, onClose }: SidebarProps) {
       {/* Sidebar */}
       <aside
         className={`
-          fixed md:sticky top-0 md:top-16 left-0 z-50 md:z-auto
+          fixed md:sticky top-0 md:top-16 left-0 z-[110] md:z-auto
           w-64 h-screen md:h-[calc(100vh-4rem)]
-          bg-gray-50 border-r border-gray-200
+          bg-white md:bg-gray-50 border-r border-gray-200
           transform transition-transform duration-300 ease-in-out
           ${isMobileOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
           flex flex-col
+          shadow-2xl md:shadow-none
         `}
       >
         {/* Mobile Header */}
