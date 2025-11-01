@@ -5,14 +5,18 @@ import { Button } from "@/components/ui/button"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import Link from "next/link"
 import { useEffect, useState } from "react"
-import { Download, Menu, X } from "lucide-react"
+import { Download, Menu } from "lucide-react"
 
 interface BeforeInstallPromptEvent extends Event {
   prompt: () => Promise<void>
   userChoice: Promise<{ outcome: "accepted" | "dismissed" }>
 }
 
-export function Navbar() {
+interface NavbarProps {
+  onMenuClick?: () => void
+}
+
+export function Navbar({ onMenuClick }: NavbarProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
   const [showInstallButton, setShowInstallButton] = useState(false)
@@ -60,14 +64,18 @@ export function Navbar() {
     <nav className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
+          {/* Hamburger Menu Button (Mobile) */}
+          <button
+            onClick={onMenuClick}
+            className="md:hidden p-2 hover:bg-blue-700 rounded-lg transition-colors"
+            aria-label="Toggle menu"
+          >
+            <Menu size={24} />
+          </button>
+
           <Link href="/demo" className="font-bold text-xl">
             SchoolMS - Demo
           </Link>
-
-          {/* Mobile Menu Toggle */}
-          <div className="md:hidden">
-            <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? <X size={24} /> : <Menu size={24} />}</button>
-          </div>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-4">
