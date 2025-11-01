@@ -60,11 +60,10 @@ export default function DemoPage() {
         <h2 className="text-xl font-semibold text-gray-900 mb-4">Switch User</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {users.map((user) => (
-            <Card 
-              key={user.id} 
-              className={`cursor-pointer transition-all hover:shadow-md ${
-                user.id === currentUser.id ? 'ring-2 ring-blue-500 bg-blue-50' : 'hover:bg-gray-50'
-              }`}
+            <Card
+              key={user.id}
+              className={`cursor-pointer transition-all hover:shadow-md ${user.id === currentUser.id ? 'ring-2 ring-blue-500 bg-blue-50' : 'hover:bg-gray-50'
+                }`}
               onClick={() => handleUserSwitch(user.id)}
             >
               <CardContent className="p-4">
@@ -79,13 +78,12 @@ export default function DemoPage() {
                   <div className="flex-1">
                     <h3 className="font-medium text-gray-900">{user.full_name}</h3>
                     <p className="text-xs text-gray-500">{user.email}</p>
-                    <Badge 
-                      variant="outline" 
-                      className={`mt-1 text-xs ${
-                        user.role === 'teacher' 
-                          ? 'border-green-200 text-green-700' 
+                    <Badge
+                      variant="outline"
+                      className={`mt-1 text-xs ${user.role === 'teacher'
+                          ? 'border-green-200 text-green-700'
                           : 'border-blue-200 text-blue-700'
-                      }`}
+                        }`}
                     >
                       {user.role}
                     </Badge>
@@ -97,7 +95,24 @@ export default function DemoPage() {
         </div>
       </div>
 
-    
+      {/* Demo Information */}
+      <Card>
+        <CardHeader>
+          <CardTitle>Demo Information</CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-2">
+          <p className="text-gray-600">
+            This is a demo version using static data. No database connection required.
+          </p>
+          <p className="text-gray-600">
+            Available users:
+          </p>
+          <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+            <li><strong>Teachers:</strong> rajesh.sharma@school.com, priya.singh@school.com</li>
+            <li><strong>Students:</strong> amit.kumar@student.com, sneha.patel@student.com, and 3 more</li>
+          </ul>
+        </CardContent>
+      </Card>
     </div>
   )
 }

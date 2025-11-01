@@ -13,8 +13,18 @@ interface BeforeInstallPromptEvent extends Event {
 export function InstallPrompt() {
     const [deferredPrompt, setDeferredPrompt] = useState<BeforeInstallPromptEvent | null>(null)
     const [showPrompt, setShowPrompt] = useState(false)
+    const [isDismissed, setIsDismissed] = useState(false)
 
     useEffect(() => {
+        // Check if dismissed in this session
+        if (typeof window !== 'undefined') {
+            const dismissed = sessionStorage.getItem("installPromptDismissed")
+            if (dismissed) {
+                setIsDismissed(true)
+                return
+            }
+        }
+
         const handler = (e: Event) => {
             e.preventDefault()
             setDeferredPrompt(e as BeforeInstallPromptEvent)
@@ -53,12 +63,15 @@ export function InstallPrompt() {
 
     const handleDismiss = () => {
         setShowPrompt(false)
+        setIsDismissed(true)
         // Don't show again in this session
-        sessionStorage.setItem("installPromptDismissed", "true")
+        if (typeof window !== 'undefined') {
+            sessionStorage.setItem("installPromptDismissed", "true")
+        }
     }
 
     // Don't show if dismissed in this session
-    if (sessionStorage.getItem("installPromptDismissed")) {
+    if (isDismissed) {
         return null
     }
 

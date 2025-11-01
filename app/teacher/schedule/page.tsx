@@ -34,7 +34,7 @@ export default function TeacherSchedulePage() {
       acc[item.day_of_week].push(item)
       return acc
     },
-    {} as Record<string, ScheduleRecord[]>,
+    {} as Record<string, Schedule[]>,
   )
 
   const sortedDays = daysOrder.filter((day) => day in groupedSchedule)

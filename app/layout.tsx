@@ -1,6 +1,6 @@
 import type React from "react"
 import type { Metadata, Viewport } from "next"
-import { Navbar } from "@/components/navbar"
+// import { Navbar } from "@/components/navbar"
 import { Sidebar } from "@/components/sidebar"
 import { InstallPrompt } from "@/components/install-prompt"
 import "./globals.css"
@@ -52,7 +52,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-gray-50">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="flex">
           <Sidebar />
           <main className="flex-1 overflow-auto">{children}</main>
