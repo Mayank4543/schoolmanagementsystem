@@ -1,0 +1,373 @@
+{
+  "users": [
+    {
+      "id": "teacher-1",
+      "email": "rajesh.sharma@school.com",
+      "role": "teacher",
+      "full_name": "Rajesh Sharma",
+      "phone": "+91-9876543210"
+    },
+    {
+      "id": "teacher-2", 
+      "email": "priya.singh@school.com",
+      "role": "teacher",
+      "full_name": "Priya Singh",
+      "phone": "+91-9876543211"
+    },
+    {
+      "id": "student-1",
+      "email": "amit.kumar@student.com",
+      "role": "student", 
+      "full_name": "Amit Kumar",
+      "phone": "+91-9876543212"
+    },
+    {
+      "id": "student-2",
+      "email": "sneha.patel@student.com",
+      "role": "student",
+      "full_name": "Sneha Patel", 
+      "phone": "+91-9876543213"
+    },
+    {
+      "id": "student-3",
+      "email": "rahul.gupta@student.com",
+      "role": "student",
+      "full_name": "Rahul Gupta",
+      "phone": "+91-9876543214"
+    },
+    {
+      "id": "student-4",
+      "email": "anjali.verma@student.com", 
+      "role": "student",
+      "full_name": "Anjali Verma",
+      "phone": "+91-9876543215"
+    },
+    {
+      "id": "student-5",
+      "email": "vikash.yadav@student.com",
+      "role": "student",
+      "full_name": "Vikash Yadav", 
+      "phone": "+91-9876543216"
+    }
+  ],
+  "classes": [
+    {
+      "id": "class-1",
+      "name": "Class 10-A",
+      "grade": "10",
+      "section": "A", 
+      "teacher_id": "teacher-1",
+      "studentCount": 25
+    },
+    {
+      "id": "class-2",
+      "name": "Class 10-B",
+      "grade": "10", 
+      "section": "B",
+      "teacher_id": "teacher-2",
+      "studentCount": 22
+    },
+    {
+      "id": "class-3",
+      "name": "Class 9-A",
+      "grade": "9",
+      "section": "A",
+      "teacher_id": "teacher-1", 
+      "studentCount": 28
+    }
+  ],
+  "enrollments": [
+    {
+      "id": "enroll-1",
+      "student_id": "student-1",
+      "class_id": "class-1"
+    },
+    {
+      "id": "enroll-2", 
+      "student_id": "student-2",
+      "class_id": "class-1" 
+    },
+    {
+      "id": "enroll-3",
+      "student_id": "student-3",
+      "class_id": "class-2"
+    },
+    {
+      "id": "enroll-4",
+      "student_id": "student-4",
+      "class_id": "class-2"
+    },
+    {
+      "id": "enroll-5",
+      "student_id": "student-5", 
+      "class_id": "class-3"
+    }
+  ],
+  "schedules": [
+    {
+      "id": "schedule-1",
+      "teacher_id": "teacher-1",
+      "class_id": "class-1",
+      "subject": "Mathematics",
+      "day_of_week": "Monday",
+      "start_time": "09:00",
+      "end_time": "09:45",
+      "classes": {
+        "name": "Class 10-A"
+      }
+    },
+    {
+      "id": "schedule-2",
+      "teacher_id": "teacher-1", 
+      "class_id": "class-1",
+      "subject": "Physics",
+      "day_of_week": "Tuesday",
+      "start_time": "10:00",
+      "end_time": "10:45",
+      "classes": {
+        "name": "Class 10-A"
+      }
+    },
+    {
+      "id": "schedule-3",
+      "teacher_id": "teacher-1",
+      "class_id": "class-3",
+      "subject": "Mathematics", 
+      "day_of_week": "Wednesday",
+      "start_time": "11:00",
+      "end_time": "11:45",
+      "classes": {
+        "name": "Class 9-A"
+      }
+    },
+    {
+      "id": "schedule-4",
+      "teacher_id": "teacher-2",
+      "class_id": "class-2",
+      "subject": "English",
+      "day_of_week": "Monday",
+      "start_time": "09:00", 
+      "end_time": "09:45",
+      "classes": {
+        "name": "Class 10-B"
+      }
+    },
+    {
+      "id": "schedule-5",
+      "teacher_id": "teacher-2",
+      "class_id": "class-2", 
+      "subject": "Hindi",
+      "day_of_week": "Thursday",
+      "start_time": "14:00",
+      "end_time": "14:45",
+      "classes": {
+        "name": "Class 10-B"
+      }
+    }
+  ],
+  "attendance": [
+    {
+      "id": "att-1",
+      "student_id": "student-1",
+      "class_id": "class-1",
+      "date": "2025-10-30",
+      "status": "present",
+      "classes": {
+        "name": "Class 10-A"
+      }
+    },
+    {
+      "id": "att-2",
+      "student_id": "student-2", 
+      "class_id": "class-1",
+      "date": "2025-10-30",
+      "status": "present",
+      "classes": {
+        "name": "Class 10-A"
+      }
+    },
+    {
+      "id": "att-3",
+      "student_id": "student-1",
+      "class_id": "class-1",
+      "date": "2025-10-29",
+      "status": "late",
+      "classes": {
+        "name": "Class 10-A"
+      }
+    },
+    {
+      "id": "att-4",
+      "student_id": "student-3",
+      "class_id": "class-2",
+      "date": "2025-10-30",
+      "status": "present", 
+      "classes": {
+        "name": "Class 10-B"
+      }
+    },
+    {
+      "id": "att-5",
+      "student_id": "student-4",
+      "class_id": "class-2",
+      "date": "2025-10-30",
+      "status": "absent",
+      "classes": {
+        "name": "Class 10-B"
+      }
+    }
+  ],
+  "exams": [
+    {
+      "id": "exam-1",
+      "class_id": "class-1",
+      "subject": "Mathematics",
+      "exam_date": "2025-11-15",
+      "start_time": "10:00",
+      "end_time": "12:00",
+      "total_marks": 100,
+      "classes": {
+        "name": "Class 10-A"
+      }
+    },
+    {
+      "id": "exam-2",
+      "class_id": "class-1", 
+      "subject": "Physics",
+      "exam_date": "2025-11-18",
+      "start_time": "10:00",
+      "end_time": "12:00",
+      "total_marks": 80,
+      "classes": {
+        "name": "Class 10-A"
+      }
+    },
+    {
+      "id": "exam-3",
+      "class_id": "class-2",
+      "subject": "English", 
+      "exam_date": "2025-11-20",
+      "start_time": "09:00",
+      "end_time": "11:00",
+      "total_marks": 100,
+      "classes": {
+        "name": "Class 10-B"
+      }
+    },
+    {
+      "id": "exam-4",
+      "class_id": "class-3",
+      "subject": "Mathematics",
+      "exam_date": "2025-11-22", 
+      "start_time": "14:00",
+      "end_time": "16:00",
+      "total_marks": 75,
+      "classes": {
+        "name": "Class 9-A"
+      }
+    }
+  ],
+  "marks": [
+    {
+      "id": "marks-1",
+      "student_id": "student-1",
+      "exam_id": "exam-1",
+      "marks_obtained": 85,
+      "grade": "A",
+      "exams": {
+        "subject": "Mathematics",
+        "exam_date": "2025-11-15",
+        "total_marks": 100,
+        "classes": {
+          "name": "Class 10-A"
+        }
+      }
+    },
+    {
+      "id": "marks-2",
+      "student_id": "student-2",
+      "exam_id": "exam-1", 
+      "marks_obtained": 92,
+      "grade": "A+",
+      "exams": {
+        "subject": "Mathematics",
+        "exam_date": "2025-11-15",
+        "total_marks": 100,
+        "classes": {
+          "name": "Class 10-A"
+        }
+      }
+    },
+    {
+      "id": "marks-3",
+      "student_id": "student-1",
+      "exam_id": "exam-2",
+      "marks_obtained": 78,
+      "grade": "B+",
+      "exams": {
+        "subject": "Physics", 
+        "exam_date": "2025-11-18",
+        "total_marks": 80,
+        "classes": {
+          "name": "Class 10-A"
+        }
+      }
+    },
+    {
+      "id": "marks-4",
+      "student_id": "student-3",
+      "exam_id": "exam-3",
+      "marks_obtained": 88,
+      "grade": "A",
+      "exams": {
+        "subject": "English",
+        "exam_date": "2025-11-20",
+        "total_marks": 100, 
+        "classes": {
+          "name": "Class 10-B"
+        }
+      }
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "user_id": "student-1",
+      "title": "Exam Schedule Released",
+      "message": "Mathematics exam scheduled for November 15, 2025",
+      "type": "exam",
+      "read": false,
+      "created_at": "2025-10-25"
+    },
+    {
+      "id": "notif-2",
+      "user_id": "student-1",
+      "title": "Assignment Due",
+      "message": "Physics assignment due tomorrow",
+      "type": "assignment", 
+      "read": true,
+      "created_at": "2025-10-28"
+    },
+    {
+      "id": "notif-3",
+      "user_id": "teacher-1",
+      "title": "Parent Meeting",
+      "message": "Parent-teacher meeting scheduled for next week",
+      "type": "meeting",
+      "read": false,
+      "created_at": "2025-10-30"
+    }
+  ],
+  "dashboardStats": {
+    "student": {
+      "attendance": 85,
+      "upcomingExams": 2
+    },
+    "teacher": {
+      "classes": 3,
+      "students": 75,
+      "upcomingExams": 4,
+      "attendance": 0
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "name": "School Management System - Demo",
+  "short_name": "SchoolMS",
+  "description": "Complete school management system for students and teachers (Demo Mode)",
+  "start_url": "/demo",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#1e3a8a",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192-maskable.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshot-540.png",
+      "sizes": "540x720",
+      "type": "image/png",
+      "form_factor": "narrow"
+    },
+    {
+      "src": "/screenshot-1280.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    }
+  ],
+  "categories": ["education"],
+  "shortcuts": [
+    {
+      "name": "View Attendance",
+      "short_name": "Attendance",
+      "description": "Quick access to attendance records",
+      "url": "/student/attendance",
+      "icons": [
+        {
+          "src": "/icon-shortcut-attendance.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "View Schedule",
+      "short_name": "Schedule",
+      "description": "Quick access to class schedule",
+      "url": "/student/schedule",
+      "icons": [
+        {
+          "src": "/icon-shortcut-schedule.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}
